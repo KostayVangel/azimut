@@ -196,7 +196,7 @@ class StudentsViewSet(ModelViewSet):
 
     def get_queryset(self):
         return User.objects.filter(
-            account_type=AccountType.EMPLOYEE
+            account_type=AccountType.STUDENT
         ).select_related("role")
 
 
