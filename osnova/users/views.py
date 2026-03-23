@@ -153,7 +153,7 @@ class StaffListCreateAPIView(generics.ListCreateAPIView):
 
     def get_queryset(self):
         return User.objects.filter(
-            account_type=User.AccountType.EMPLOYEE
+            account_type=AccountType.EMPLOYEE
         ).select_related("role").order_by("id")
 
     def get_serializer_class(self):
@@ -178,7 +178,7 @@ class StaffRetrieveUpdateAPIView(generics.RetrieveUpdateAPIView):
 
     def get_queryset(self):
         return User.objects.filter(
-            account_type=User.AccountType.EMPLOYEE
+            account_type=AccountType.EMPLOYEE
         ).select_related("role")
 
     def get_serializer_class(self):
@@ -193,6 +193,11 @@ class StudentsViewSet(ModelViewSet):
         if self.action == "list":
             return UserProfileSerializer
         return StudentSerializer
+
+    def get_queryset(self):
+        return User.objects.filter(
+            account_type=AccountType.EMPLOYEE
+        ).select_related("role")
 
 
     def get_permissions(self):
@@ -240,7 +245,7 @@ class StudentsViewSet(ModelViewSet):
             students_obj = User.objects.bulk_create(students, ignore_conflicts=ignore_conflicts)
 
         return Response(
-            data=UserProfileSerializer(students_obj, many=True),
+            data=UserProfileSerializer(students_obj, many=True).data,
             status=status.HTTP_201_CREATED
         )
 
