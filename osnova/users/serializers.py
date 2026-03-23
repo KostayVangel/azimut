@@ -477,11 +477,11 @@ class ChangePasswordSerializer(serializers.Serializer):
 
 
 class StudentSerializer(serializers.ModelSerializer):
-
+    password = serializers.CharField(write_only=True, required=True)
     class Meta:
         model = User
         fields = (
-            "email", "first_name", "last_name", "middle_name", "phone"
+            "email", "first_name", "last_name", "middle_name", "phone", "password"
         )
 
 
