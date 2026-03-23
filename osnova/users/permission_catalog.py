@@ -1,0 +1,136 @@
+PERMISSION_CATALOG = [
+    {
+        "code": "store_settings",
+        "title": "Настройка магазина",
+        "position": 1,
+        "allow_partial_permissions": True,
+        "actions": [
+            {"code": "store.cards.create", "title": "Создание карточки", "position": 1},
+            {"code": "store.cards.edit", "title": "Редактирование карточки", "position": 2},
+        ],
+    },
+    {
+        "code": "banner",
+        "title": "Управление банером",
+        "position": 2,
+        "allow_partial_permissions": True,
+        "actions": [
+            {"code": "banner.image.upload", "title": "Загрузка фотографии для банера", "position": 1},
+            {"code": "banner.visibility.toggle", "title": "Включение и выключение банера", "position": 2},
+        ],
+    },
+    {
+        "code": "courses",
+        "title": "Курсы",
+        "position": 3,
+        "allow_partial_permissions": True,
+        "actions": [
+            {"code": "courses.folder.create", "title": "Создание папки", "position": 1},
+            {"code": "courses.folder.rename", "title": "Редактирование названия папки", "position": 2},
+            {"code": "courses.files.attach", "title": "Прикрепление файлов", "position": 3},
+            {"code": "courses.description.create", "title": "Добавление описания", "position": 4},
+            {"code": "courses.description.edit", "title": "Редактирование описания", "position": 5},
+            {"code": "courses.tests.create", "title": "Добавление тестирования", "position": 6},
+            {"code": "courses.tests.edit", "title": "Редактирование тестирования", "position": 7},
+        ],
+    },
+    {
+        "code": "employees",
+        "title": "Сотрудники",
+        "position": 4,
+        "allow_partial_permissions": True,
+        "actions": [
+            {"code": "employees.roles.view", "title": "Просмотр всех ролей", "position": 1},
+            {"code": "employees.roles.delete", "title": "Удаление ролей из списка", "position": 2},
+            {"code": "employees.roles.create", "title": "Создание ролей", "position": 3},
+            {"code": "employees.roles.configure", "title": "Гибкая настройка ролей при создании", "position": 4},
+            {"code": "employees.staff.view", "title": "Просмотр сотрудников", "position": 5},
+            {"code": "employees.staff.create", "title": "Создание сотрудника", "position": 6},
+            {"code": "employees.staff.edit", "title": "Редактирование данных сотрудника", "position": 7},
+        ],
+    },
+    {
+        "code": "distribution",
+        "title": "Распределение",
+        "position": 5,
+        "allow_partial_permissions": True,
+        "actions": [
+            {"code": "distribution.groups.create", "title": "Создание групп", "position": 1},
+            {"code": "distribution.students.create", "title": "Создание учащихся", "position": 2},
+            {"code": "distribution.students.credentials.edit", "title": "Редактирование учащихся (логин, пароль)", "position": 3},
+            {"code": "distribution.students.sensitive_data.view", "title": "Просмотр информации об учащихся", "position": 4},
+            {"code": "distribution.students.groups.add", "title": "Присоединение учащихся к группам", "position": 5},
+            {"code": "distribution.students.groups.remove", "title": "Удаление учащихся из групп", "position": 6},
+        ],
+    },
+    {
+        "code": "students",
+        "title": "Учащиеся",
+        "position": 6,
+        "allow_partial_permissions": True,
+        "actions": [
+            {"code": "students.groups.view", "title": "Просмотр групп студентов и слушателей", "position": 1},
+            {"code": "students.progress.group.view", "title": "Просмотр табеля всей группы", "position": 2},
+            {"code": "students.progress.single.view", "title": "Просмотр успеваемости учащегося", "position": 3},
+            {"code": "students.courses.add", "title": "Добавление курса учащемуся", "position": 4},
+        ],
+    },
+    {
+        "code": "payments",
+        "title": "Оплата",
+        "position": 7,
+        "allow_partial_permissions": True,
+        "actions": [
+            {"code": "payments.view_all", "title": "Просмотр информации об оплате всех студентов", "position": 1},
+            {"code": "payments.notifications.send", "title": "Рассылка сообщения о приближающейся дате оплаты", "position": 2},
+        ],
+    },
+    {
+        "code": "documents",
+        "title": "Документы",
+        "position": 8,
+        "allow_partial_permissions": True,
+        "actions": [
+            {"code": "documents.files.upload", "title": "Загрузка файлов", "position": 1},
+            {"code": "documents.files.delete", "title": "Удаление файлов", "position": 2},
+        ],
+    },
+    {
+        "code": "chats",
+        "title": "Чаты",
+        "position": 9,
+        "allow_partial_permissions": True,
+        "actions": [
+            {"code": "chats.all.view", "title": "Просмотр всех чатов", "position": 1},
+            {"code": "chats.assigned.view", "title": "Просмотр чатов, закрепленных за сотрудником", "position": 2},
+        ],
+    },
+    {
+        "code": "applications",
+        "title": "Принятие заявок",
+        "position": 10,
+        "allow_partial_permissions": True,
+        "actions": [
+            {"code": "applications.all.view", "title": "Просмотр всех заявок", "position": 1},
+            {"code": "applications.take_in_work", "title": "Принятие обращения в обработку", "position": 2},
+        ],
+    },
+    {
+        "code": "profile_access",
+        "title": "Доступ к профилю",
+        "position": 11,
+        "allow_partial_permissions": True,
+        "actions": [
+            {"code": "profile.required_documents.edit", "title": "Редактирование требуемых документов", "position": 1},
+        ],
+    },
+    {
+        "code": "design",
+        "title": "Оформление",
+        "position": 12,
+        "allow_partial_permissions": False,
+        "actions": [
+            {"code": "design.access", "title": "Доступ к вкладке оформления", "position": 1},
+        ],
+    },
+]
